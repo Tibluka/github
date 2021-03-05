@@ -1,0 +1,28 @@
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.content {
+  .background {
+    min-height: 350px;
+    background-image: url("../../../assets/images/pexels-photo-1089440.jpeg");
+    background-repeat: no-repeat;
+  }
+  .data {
+    margin: 0 30%;
+  }
+  .action {
+    margin-top: 16px;
+    display: flex;
+  }
+  .res{
+    margin: 0 30%;
+
+  }
+}

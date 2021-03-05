@@ -1,0 +1,26 @@
+<div class="content">
+
+    <div class="top">
+        <img src="../../../assets/images/logo.svg" alt="">
+        <h1>Explore repositórios no GitHub</h1>
+        <div class="input-class">
+            <input placeholder="Digite aqui" type="text">
+            <button type="button">Pesquisar</button>
+        </div>
+    </div>
+
+    <div class="result">
+        <div class="repos" *ngFor="let repo of repos">
+            <div class="img">
+                <img src="../../../assets/images/img-repo.svg" alt="">
+            </div>
+            <div class="text">
+                <h3>{{repo.repoLink}}</h3>
+                <p>{{repo.description}}</p>
+            </div>
+            <div class="arrow">
+                <img src="../../../assets/images/arrow.svg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
