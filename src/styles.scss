@@ -12,11 +12,25 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-.btn{
+.btn {
     width: 210px;
     height: 48px;
 }
 
-.mt-10{
+.mt-10 {
     margin-top: 10px;
+}
+.mr-80{
+    margin-right: 80px;
+}
+.ml{
+    margin-left: 5px;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
 }

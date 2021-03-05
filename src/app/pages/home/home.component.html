@@ -4,19 +4,20 @@
         <img src="../../../assets/images/logo.svg" alt="">
         <h1>Explore repositórios no GitHub</h1>
         <div class="input-class">
-            <input placeholder="Digite aqui" type="text">
-            <button type="button">Pesquisar</button>
+            <input [(ngModel)]="input" placeholder="Digite aqui" type="text">
+            <button type="button" (click)="getUser()">Pesquisar</button>
         </div>
     </div>
 
     <div class="result">
-        <div class="repos" *ngFor="let repo of repos">
+        <h4>Repositórios deste usuário ({{reposListCount}})</h4>
+        <div (click)="redirect(repo)" class="repos" *ngFor="let repo of repos">
             <div class="img">
-                <img src="../../../assets/images/img-repo.svg" alt="">
+                <img src="{{repo.owner.avatar_url}}" alt="">
             </div>
             <div class="text">
-                <h3>{{repo.repoLink}}</h3>
-                <p>{{repo.description}}</p>
+                <h3>{{repo.name}}</h3>
+                <p>{{repo.html_url}}</p>
             </div>
             <div class="arrow">
                 <img src="../../../assets/images/arrow.svg" alt="">

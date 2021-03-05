@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Endereco } from 'src/app/models/endereco';
 import { ApiService } from 'src/app/services/api.service';
@@ -13,23 +14,24 @@ export class CadastroComponent implements OnInit {
   cep = ''
   cadastro: User = new User()
   endereco: Endereco = new Endereco()
-  
-  constructor(public apiService: ApiService) { }
+
+  constructor(private apiService: ApiService,
+    private http: HttpClient) { }
 
   ngOnInit(): void {
-    console.log(this.cadastro);
-    console.log(this.endereco);
-    
-  }
-
-  cadastrarCep(){
 
   }
 
   buscarCep() {
-
-    this.apiService.getAPI(this.cep + '/json').subscribe((result: any) => {
-     
+    this.http.get('http://viacep.com.br/ws/' + this.cep + '/json').subscribe((result: any) => {
+      this.endereco = {
+        rua: result.logradouro,
+        cidade: result.localidade,
+        bairro: result.bairro,
+        complemento: '',
+        numero: '',
+        cep: result.cep
+      }
     })
   }
 

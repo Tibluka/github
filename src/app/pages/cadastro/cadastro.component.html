@@ -3,18 +3,25 @@
 
     </div>
     <div class="data">
-        {{cep}}
         <div class="action">
             <input type="text" mask="00000-000" [(ngModel)]="cep" class="example-full-width">
             <button mat-raised-button class="btn" (click)="buscarCep()">Pesquisar cep</button>
         </div>
     </div>
     <div class="res">
-        <form action="" >
-            <input type="text" class="mt-10 example-full-width">
-            <input type="text" class="mt-10 example-full-width">
-            <input type="text" class=" mt-10 example-full-width">
-            <input type="text" class=" mt-10 example-full-width">
+        <form action="">
+            <label for="rua">Rua</label>
+            <input type="text" name="rua" [(ngModel)]="endereco.rua" class="mt-10 example-full-width">
+            <label for="bairro">Bairro</label>
+            <input type="text" name="bairro" [(ngModel)]="endereco.bairro" class="mt-10 example-full-width">
+            <label for="numero">Número</label>
+            <input type="text" name="numero" [(ngModel)]="endereco.numero" class=" mt-10 example-full-width">
+            <label for="complemento">Complemento</label>
+            <input type="text" name="complemento" [(ngModel)]="endereco.complemento" class=" mt-10 example-full-width">
+            <label for="cidade">Cidade</label>
+            <input type="text" name="cidade" [(ngModel)]="endereco.cidade" class=" mt-10 example-full-width">
+            <label for="cep">Cep</label>
+            <input type="text" name="cep" [(ngModel)]="endereco.cep" class=" mt-10 example-full-width">
         </form>
 
     </div>

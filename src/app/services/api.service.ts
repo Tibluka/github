@@ -8,6 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class ApiService {
 
+  // repos/
+
   constructor(
     private http: HttpClient) {
   }
@@ -15,6 +17,8 @@ export class ApiService {
   getAPI<T>(params: string): Observable<T> {
     return this.http.get<T>(environment.url + params)
   }
+
+  
 
 }
 

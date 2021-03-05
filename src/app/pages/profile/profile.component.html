@@ -1,0 +1,52 @@
+<div class="content">
+    <div class="top">
+        <img src="../../../assets/images/logo.svg" alt="">
+        <img src="../../../assets/images/back.svg" alt="">
+    </div>
+
+    <div class="profile-details">
+        <div class="d-flex topo">
+            <img src="{{userData.owner.avatar_url}}" alt="">
+            <div class="d-flex direction">
+                <h1 class="title">{{userData.full_name}}</h1>
+                <p class="desc">{{userData.html_url}}</p>
+            </div>
+        </div>
+        <div class="flag-infos d-flex">
+            <div class="stars mr-80">
+                <div class="d-flex flex-column">
+                    <h1 class="title">{{userData.stargazers_count}}</h1>
+                    <p class="desc">Stars</p>
+                </div>
+            </div>
+            <div class="forks mr-80">
+                <div class="d-flex flex-column">
+                    <h1 class="title">{{userData.forks_count}}</h1>
+                    <p class="desc">Forks</p>
+                </div>
+            </div>
+            <div class="issues">
+                <div class="d-flex flex-column">
+                    <h1 class="title">{{userData.open_issues_count}}</h1>
+                    <p class="desc">Issues</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="result">
+        <h4>Repositórios deste usuário (0)</h4>
+        <div class="repos" *ngFor="let issue of issues">
+            <div class="img">
+                <img src="{{issue.user.avatar_url}}" alt="">
+            </div>
+            <div class="text">
+                <h3>{{issue.title}}</h3>
+                <p>{{issue.user.login}}</p>
+            </div>
+            <div class="arrow">
+                <img src="../../../assets/images/arrow.svg" alt="">
+            </div>
+        </div>
+    </div>
+</div>
